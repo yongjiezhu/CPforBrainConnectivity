@@ -17,7 +17,7 @@ from mne.viz import  plot_connectivity_circle
 
 
 Sim = scio.loadmat("simulatedData.mat")
-X = Sim['Sim']
+X = Sim['Sim'] # X[i,j,k] represents the connectivity value in time points k, freq bin j and paires (nodes) i
 freq_index=np.linspace(3,45,169)
 # Fit CP tensor decomposition .
 U = tt.ncp_hals(X, rank=3, verbose=True) # _bcd or _als for options
